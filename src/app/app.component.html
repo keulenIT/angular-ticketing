@@ -1,15 +1,22 @@
-<app-header />
-
 <main>
   <div id="dashboard">
-    <div class="dashboard-item">
+    <app-dashboard-item
+      [image]="{ src: 'globe.png', alt: 'A globe' }"
+      title="Server status"
+    >
       <app-server-status></app-server-status>
-    </div>
-    <div class="dashboard-item">
+    </app-dashboard-item>
+    <app-dashboard-item
+      [image]="{ src: 'globe.png', alt: 'A globe' }"
+      title="App traffic"
+    >
       <app-traffic></app-traffic>
-    </div>
-    <div class="dashboard-item">
-      <app-tickets> </app-tickets>
-    </div>
+    </app-dashboard-item>
+    <app-dashboard-item
+      [image]="{ src: 'globe.png', alt: 'A globe' }"
+      title="Tickets"
+    >
+      <app-tickets></app-tickets>
+    </app-dashboard-item>
   </div>
 </main>
