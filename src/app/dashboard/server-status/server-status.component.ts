@@ -9,4 +9,17 @@ import { Component } from "@angular/core";
 })
 export class ServerStatusComponent {
   currentStatus = "online";
+
+  constructor() {
+    setInterval(() => {
+      const randomizer = Math.random();
+      if (randomizer < 0.5) {
+        this.currentStatus = "online";
+      } else if (randomizer < 0.9) {
+        this.currentStatus = "offline";
+      } else {
+        this.currentStatus = "unknown";
+      }
+    }, 5000);
+  }
 }
